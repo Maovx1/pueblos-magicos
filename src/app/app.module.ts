@@ -15,7 +15,7 @@ import { ModalComponent } from './modal/modal.component';
 
 import {GoogleMapsModule} from '@angular/google-maps';
 
-import { CoordenadasService } from './coordenadas.service';
+import { CoordenadasService } from './Services/coordenadas.service';
 
 @NgModule({
   declarations: [

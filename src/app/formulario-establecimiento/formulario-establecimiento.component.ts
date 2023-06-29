@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { DatabaseService } from '../database.service';
-import { CoordenadasService } from '../coordenadas.service';
-import { MapaService } from '../mapa.service';
+import { DatabaseService } from '../Services/database.service';
+import { CoordenadasService } from '../Services/coordenadas.service';
+import { MapaService } from '../Services/mapa.service';
 
 @Component({
   selector: 'app-formulario-establecimiento',

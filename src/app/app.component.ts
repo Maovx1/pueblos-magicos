@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MapaService } from './mapa.service';
-import { CoordenadasService } from './coordenadas.service';
+import { MapaService } from './Services/mapa.service';
+import { CoordenadasService } from './Services/coordenadas.service';
 
 @Component({
   selector: 'app-root',
