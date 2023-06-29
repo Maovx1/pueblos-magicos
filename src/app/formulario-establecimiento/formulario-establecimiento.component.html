@@ -1,0 +1,67 @@
+<form (ngSubmit)="guardarEstablecimiento()" class="establecimiento-form">
+  <h2>Registro de Establecimiento</h2>
+
+  <div class="foto-container" *ngIf="fotoURL">
+    <img [src]="fotoURL" alt="Foto del negocio" class="foto-negocio">
+  </div>
+
+  <div class="form-group">
+    <label for="puebloMagico">Pueblo Mágico:</label>
+    <select [(ngModel)]="puebloMagico" name="puebloMagico" id="puebloMagico" required>
+      <option value="">Selecciona una opcion</option>
+      <option value="Valle de Bravo">Valle de Bravo</option>
+      <option value="Aculco">Aculco</option>
+      <option value="El oro">El oro</option>
+      <option value="San Juan Teotihuacán">San Juan Teotihuacán</option>
+      <option value="Villa del Carbón">Villa del Carbón</option>
+      <option value="Tepotzotlán">Tepotzotlán</option>
+      <option value="Ixtapan de la Sal">Ixtapan de la Sal</option>
+      <option value="Metepec">Metepec</option>
+      <option value="Malinalco">Malinalco</option>
+      <option value="Tonatico">Tonatico</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="nombreLocal">Nombre del Local:</label>
+    <input type="text" [(ngModel)]="nombreLocal" name="nombreLocal" id="nombreLocal" placeholder="Nombre del local"
+      required>
+  </div>
+
+  <div class="form-group">
+    <label for="horarioAtencion">Horario de Atención:</label>
+    <input type="text" [(ngModel)]="horarioAtencion" name="horarioAtencion" id="horarioAtencion"
+      placeholder="Ej: '10am a 6pm'" required>
+  </div>
+
+  <div class="form-group">
+    <label for="descripcionNegocio">Descripción del negocio:</label>
+    <textarea [(ngModel)]="descripcionNegocio" name="descripcionNegocio" id="descripcionNegocio"
+      placeholder="Qué servicio o producto ofrece su negocio" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="propietario">Propietario o responsable:</label>
+    <input type="text" [(ngModel)]="propietario" name="propietario" id="propietario" placeholder="Nombre del dueño"
+      required>
+  </div>
+
+  <div class="form-group">
+    <label for="redesSociales">Redes Sociales:</label>
+    <input type="text" [(ngModel)]="redesSociales" name="redesSociales" id="redesSociales"
+      placeholder="Nombre de la cuenta">
+  </div>
+
+  <div class="form-group">
+    <label for="foto">Foto:</label>
+    <input type="file" (change)="onFileSelected($event)" id="foto" accept="image/*">
+  </div>
+
+
+  <button class="btn btn-primary" type="submit">Guardar</button>
+  <button (click)="abrirModal(); $event.stopPropagation()" class="btn btn-secondary">Abrir registro existente</button>
+  <button class="btn btn-secondary" type="button" (click)="limpiarCampos()">Limpiar Campos</button>
+
+  <app-modal *ngIf="mostrarModal" [establecimientos]="establecimientos"
+    (seleccionarEstablecimiento)="seleccionarEstablecimiento($event)" (modalCerrado)="cerrarModal()"></app-modal>
+</form>

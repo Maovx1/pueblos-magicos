@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "restapi-pueblosmagicos-d6656": {
+      "hosting": {
+        "pueblos-magicos": [
+          "restapi-pueblosmagicos-d6656"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "restapi-pueblosmagicos-d6656"
+  }
+}

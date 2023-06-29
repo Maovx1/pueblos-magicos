@@ -1,0 +1,67 @@
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.mapa-contenedor {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.coordenadas-titulo {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.boton-marcador {
+  padding: 10px 20px;
+  background-color: #a74caf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .mapa-contenedor {
+    height: 200px;
+  }
+
+  .coordenadas-titulo {
+    font-size: 16px;
+  }
+}
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.coordenadas-boton-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

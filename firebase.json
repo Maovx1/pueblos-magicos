@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "pueblos-magicos",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
